@@ -28,8 +28,8 @@ function getFederalTax(grossPay, withholdingCode){
     else{
         taxrate = ( 0.18 - ((withholdingCode - 4) * 0.005));
     }
-    let federalTax = grossPay * taxrate;
-    return federalTax;
+    let federalTax = grossPay * taxrate.toFixed(2);
+    return {federalTax : federalTax, taxrate : taxrate.toFixed(2)};
 
 }
 let grossPay, withholding, withholdingCode;
@@ -40,7 +40,9 @@ let medicareTax = getMedicareTax(1550);
 console.log(`Medicare tax = $${medicareTax}`);
 
 function display_output(name, grossPay, withholdingCode){
-    console.log (`${name}   gross pay $${grossPay}     withholding code ${withholdingCode}`, `tax rate = ${getFederalTax(grossPay, withholdingCode)}`);
+    result = getFederalTax(grossPay, withholdingCode);
+    console.log (`${name}   gross pay $${grossPay}     withholding code ${withholdingCode}`, `federal tax = ${result.federalTax} federal taxrate = ${result.taxrate}`);
+    
 }
 display_output("Person 1:", 750, 0);
 display_output("Person 2:", 1550, 2);
