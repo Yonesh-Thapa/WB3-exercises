@@ -3,6 +3,7 @@
 //IF you print name.idexOf(" ") on console that only has first name then it prints -1.
 function parseAndDisplayName(name){
     let space1 = name.indexOf(" ");
+    // let space2 = name.indexOf(" ", space1)
     let space2 = name.lastIndexOf(" ");
     //if (space1 == -1 && space2 == -1)//this line works
     if (space1 < 0 && space2 < 0)//alternative solution
