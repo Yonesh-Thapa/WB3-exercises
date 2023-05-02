@@ -16,15 +16,15 @@ function parseAndDisplayName(name){
     {
         console.log(`Name: ${name}`);
         console.log(`First name: ${name.substring(0, space1)}`)
-        console.log(`Last namme: ${name.substing(space1)}`);
+        console.log(`Last namme: ${name.substing(space1 + 1)}`);
     }
     //else if (space1 != -1  && space2 != -1)// this line also works
     else
     {
         console.log(`Name: ${name}`);
         console.log(`First name: ${name.substring(0, space1)}`)
-        console.log(`Middle name: ${name.substring(space1, space2)}`)
-        console.log(`Last name: ${name.substring(space2)}`);
+        console.log(`Middle name: ${name.substring(space1 + 1 , space2)}`)
+        console.log(`Last name: ${name.substring(space2 +1)}`);
         
     }
     
