@@ -7,7 +7,9 @@ function message() {
   travelDate = new Date(travelDate.value);
   let timeDiff = travelDate.getTime() - date.getTime();
   let millisec_per_day = 1000 * 60 * 60 * 24;
-  let numDays = Math.ceil(timeDiff / millisec_per_day);
+
+  let numDays = Math.ceil(timeDiff / millisec_per_day);// this line fix off by 1 here.
+
   if (numDays < 0) {
     travelDays.innerHTML = `Sorry your trip has already passed.`;
   }
