@@ -11,7 +11,7 @@ function message() {
   if (timeDiff < 0) {
     travelDays.innerHTML = `Sorry your trip has already passed.`;
   }
-  else if (time = 0){
+  else if (timeDiff >= 0 && timeDiff <= millisec_per_day){
     travelDays.innerHTML = `Your trip is today. Have a nice day`;
   } else {
     travelDays.innerHTML = `Your trip is in ${numDays} days.`;
