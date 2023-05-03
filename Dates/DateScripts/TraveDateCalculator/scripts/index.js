@@ -7,11 +7,11 @@ function message() {
   travelDate = new Date(travelDate.value);
   let timeDiff = travelDate.getTime() - date.getTime();
   let millisec_per_day = 1000 * 60 * 60 * 24;
-  let numDays = Math.round(timeDiff / millisec_per_day);
-  if (timeDiff < 0) {
+  let numDays = Math.ceil(timeDiff / millisec_per_day);
+  if (numDays < 0) {
     travelDays.innerHTML = `Sorry your trip has already passed.`;
   }
-  else if (timeDiff >= 0 && timeDiff <= millisec_per_day){
+  else if (numDays == 0){
     travelDays.innerHTML = `Your trip is today. Have a nice day`;
   } else {
     travelDays.innerHTML = `Your trip is in ${numDays} days.`;
