@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="sameAddress" name="sameAddress" value="same" >Ship to the same address?<br>
+    <div id="shippingDiv">
+        bunch of bullshit
+
+    </div>
+
+    <fieldset>
+        <legend>Select the policy type:</legend>
+        <input type="radio" name="policy" id="auto" value="auto" checked>Auto<br>
+        <input type="radio" name="policy" id="home" value ="home">Home<br>
+        <input type="radio" name="policy" id="life" value="life">Life<br>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Rental Car Options:</legend>
+        <input type="checkbox" id="tollTag" name="tollTag" value="tolltag" checked>
+        <label for="tollTag">Electonic Toll Tag ($3.95/day plus tolls)</label><br>
+        <input type="checkbox" id="gps" name="gps" value="gps">
+        <label for="gps"> GPS ($4.95/day)</label><br>
+        <input type="checkbox" id="roadside" name="roadside" value="roadside">
+        <label for="roadside">Roadside Assistance ($2.95/day)</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Insurance Option:</legend>
+        <input type="checkbox" id="self" name="insurance" value="self" checked>
+        <label for for="self">Self Insured</label><br>
+        <input type="checkbox" id="ldw" name="insurance" value="ldw">
+        <label for="ldw">Loss Damage Waiver</label><br>
+    </fieldset>
+ </body>
+<script src="scripts/scripts.js"></script>
+</html>
